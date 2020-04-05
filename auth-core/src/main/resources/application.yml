@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: auth-core
+
+#服务端端口
+server:
+  port: 9101
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: INFO
+  file:
+    path: ./logs
+    name: auth-core
