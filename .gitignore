@@ -12,9 +12,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
+*.xml
 ### IntelliJ IDEA ###
-.idea/
+.idea/*
 .mvn
 log
 logPath_IS_UNDEFINED

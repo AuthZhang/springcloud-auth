@@ -14,4 +14,8 @@ public class TempController {
     public String  get(){
         return "a";
     }
+
+    public static void main(String[] args) {
+
+    }
 }
