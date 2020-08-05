@@ -15,7 +15,4 @@ public class TempController {
         return "a";
     }
 
-    public static void main(String[] args) {
-
-    }
 }
