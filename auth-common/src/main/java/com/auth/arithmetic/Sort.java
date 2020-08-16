@@ -81,10 +81,10 @@ public class Sort {
         }
     }
 
-    public static void main(String[] args) {
-        int a[] = new int[]{2,9,4,5,7,6};
-        quickSort(a,0,a.length-1);
-        log.info("result : {}", Arrays.toString(a));
-    }
+//    public static void main(String[] args) {
+//        int a[] = new int[]{2,9,4,5,7,6};
+//        quickSort(a,0,a.length-1);
+//        log.info("result : {}", Arrays.toString(a));
+//    }
 
 }
