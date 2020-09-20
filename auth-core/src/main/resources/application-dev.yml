@@ -5,5 +5,9 @@ spring:
     multipart:
       max-file-size: 10485760000
       max-request-size: 10485760000
+  datasource:
+    hikari:
+      jdbc-url:
+
 
 
