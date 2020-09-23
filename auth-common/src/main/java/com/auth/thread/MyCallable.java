@@ -23,7 +23,13 @@ public class MyCallable implements Callable<Integer> {
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
-        Future<?> submit = executorService.submit(new MyRunnable());
+        /**
+         * 提交一个任务
+         */
+        Future<Integer> submit = executorService.submit(new MyCallable());
+        /**
+         * 提交多个任务
+         */
         List<MyCallable> myCallables = new ArrayList<MyCallable>();
         myCallables.add(new MyCallable());
         myCallables.add(new MyCallable());
