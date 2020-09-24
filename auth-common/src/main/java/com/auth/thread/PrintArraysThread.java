@@ -18,19 +18,18 @@ public class PrintArraysThread {
 
         Object lock = new Object();
         Thread t1 = new Thread(() -> {
-            for (int i = 0; i < params.length; i++) {
-                synchronized (lock) {
+            synchronized (lock) {
+                for (int i = 0; i < params.length; i++) {
                     //奇数
                     if ((i & 1) == 0) {
                         System.out.println(Thread.currentThread().getName() + ":" + params[i]);
-                        lock.notifyAll();
-                        continue;
-                    } else {
                         try {
                             lock.wait();
                         } catch (InterruptedException e) {
 
                         }
+                    } else {
+                        lock.notifyAll();
                     }
                 }
             }
@@ -38,19 +37,19 @@ public class PrintArraysThread {
         }, "奇数位线程");
 
         Thread t2 = new Thread(() -> {
-            for (int i = 0; i < params.length; i++) {
-                synchronized (lock) {
+            synchronized (lock) {
+                for (int i = 0; i < params.length; i++) {
+
                     //偶数
                     if ((i & 1) == 1) {
                         System.out.println(Thread.currentThread().getName() + ":" + params[i]);
-                        lock.notifyAll();
-                        continue;
-                    } else {
                         try {
                             lock.wait();
                         } catch (InterruptedException e) {
 
                         }
+                    } else {
+                        lock.notifyAll();
                     }
                 }
             }
@@ -138,7 +137,7 @@ public class PrintArraysThread {
     }
 
     public static void main(String[] args) {
-        method3();
+        method1();
     }
 
 }
