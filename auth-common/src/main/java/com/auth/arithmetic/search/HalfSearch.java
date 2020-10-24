@@ -1,4 +1,4 @@
-package com.auth.arithmetic;
+package com.auth.arithmetic.search;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
  * 查找
  */
 @Slf4j
-public class Search {
+public class HalfSearch {
 
     /**
      * 二分查找、折半查找
@@ -33,7 +33,7 @@ public class Search {
              *
              */
 
-            int middle = min + (max - min) >> 1;
+            int middle = min + ((max - min) >> 1);
 
             if (params[middle] == targert) {
                 return middle;
@@ -47,17 +47,14 @@ public class Search {
     }
 
     public static void main(String[] args) {
-//        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//        int[] b = new int[Integer.MAX_VALUE >> 1];
-//        for (int i = 0; i < b.length; i++) {
-//            b[i] = i;
-//        }
+        int[] a = new int[]{0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-//        System.out.println(halSearch(b, Integer.MAX_VALUE >> 1 - 1));
+        System.out.println(halSearch(a, 2));
 
-        int a = Integer.MAX_VALUE;
-        int b = Integer.MAX_VALUE;
-        int c = (a + b) / 2;
-        System.out.println(c);
+        System.out.println(4>>1);
+//        int a = Integer.MAX_VALUE;
+//        int b = Integer.MAX_VALUE;
+//        int c = (a + b) / 2;
+//        System.out.println(c);
     }
 }

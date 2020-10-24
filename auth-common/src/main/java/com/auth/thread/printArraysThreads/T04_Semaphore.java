@@ -1,15 +1,15 @@
 package com.auth.thread.printArraysThreads;
 
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.LockSupport;
 
 /**
+ * 未调试通过
  * 两个线程交替打印数组
  */
 public class T04_Semaphore {
 
     private static final Semaphore semaphore = new Semaphore(1);
+
     /**
      * 通过信号量实现
      */
@@ -19,7 +19,7 @@ public class T04_Semaphore {
             for (int i = 0; i < params.length; i++) {
                 try {
                     semaphore.acquire();
-                }catch (InterruptedException e){
+                } catch (InterruptedException e) {
                 }
                 //奇数
                 if ((i & 1) == 0) {
@@ -32,7 +32,7 @@ public class T04_Semaphore {
             for (int i = 0; i < params.length; i++) {
                 try {
                     semaphore.acquire();
-                }catch (InterruptedException e){
+                } catch (InterruptedException e) {
                 }
                 //偶数
                 if ((i & 1) == 1) {
@@ -45,7 +45,10 @@ public class T04_Semaphore {
         t2.start();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         method4();
+
     }
+
+
 }

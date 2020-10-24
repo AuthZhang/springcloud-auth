@@ -1,4 +1,4 @@
-package com.auth.arithmetic;
+package com.auth.arithmetic.sort;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 排序
  */
 @Slf4j
-public class Sort {
+public class BubblingSort {
 
     /**
      * 冒泡排序
@@ -19,7 +19,6 @@ public class Sort {
     public static void bubblingSort(int[] params) {
         int temp = 0;
         for (int i = 0; i < params.length - 1; i++) {
-            log.info("result : {}", Arrays.toString(params));
             /**
              * 第二层循环的功能：将 "0-倒数第i+1个" 这组数据中最大的排到最后
              */
@@ -30,6 +29,7 @@ public class Sort {
                     params[j + 1] = temp;
                 }
             }
+            log.info("result : {}", Arrays.toString(params));
         }
 
     }
@@ -86,5 +86,6 @@ public class Sort {
 //        quickSort(a,0,a.length-1);
 //        log.info("result : {}", Arrays.toString(a));
 //    }
+
 
 }
