@@ -1,46 +1,37 @@
-### Java
-# Compiled class file
-*.class
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
-# Log file
-*.log
-
-
-### IntelliJ
-out/
-.idea/
-**/*.iml
-*.iml
-*.pkc
-*.idx
-.idea_modules/
-
-
-### Eclipse
+### STS ###
+.apt_generated
 .classpath
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
+.factorypath
 .project
+.settings
+.springBeans
+.sts4-cache
+*.xml
+### IntelliJ IDEA ###
+.idea/*
+.mvn
+log
+logPath_IS_UNDEFINED
+*.iws
+*.iml
+*.ipr
 
-# External tool builders
-.externalToolBuilders/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
 
-# Locally stored "Eclipse launch configurations"
-*.launch
-build.xml
-
-
-
-
-### MAVEN
-**/target/
-/target
+### VS Code ###
+.vscode/
+logs
+### modelLib
+/modelLib
