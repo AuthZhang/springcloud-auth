@@ -1,12 +1,9 @@
-package com.auth;
+package com.zhangyu;
 
 import com.google.common.primitives.Ints;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TestDemo {
     public static void main(String[] args) {

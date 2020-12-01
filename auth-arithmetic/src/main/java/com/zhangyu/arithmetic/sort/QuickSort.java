@@ -1,4 +1,4 @@
-package com.auth.arithmetic.sort;
+package com.zhangyu.arithmetic.sort;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.auth.arithmetic.search;
+package com.zhangyu.arithmetic.search;
 
 import lombok.extern.slf4j.Slf4j;
 
