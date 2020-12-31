@@ -1,4 +1,4 @@
-package com.zhangyu.leetcode.problem1_100;
+package com.zhangyu.leetcode.problem01_50;
 
 import java.util.Stack;
 
