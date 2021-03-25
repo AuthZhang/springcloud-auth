@@ -1,4 +1,4 @@
-package com.zhangyu.leetcode.problem01_50;
+package com.zhangyu.leetcode.problem01_100;
 
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.primitives.Ints;

@@ -1,4 +1,4 @@
-package com.zhangyu.leetcode.problem01_50;
+package com.zhangyu.leetcode.problem01_100;
 
 //将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 //
@@ -35,8 +35,6 @@ package com.zhangyu.leetcode.problem01_50;
 // l1 和 l2 均按 非递减顺序 排列
 //
 // Related Topics 递归 链表
-
-import java.util.List;
 
 /**
  * @description:
