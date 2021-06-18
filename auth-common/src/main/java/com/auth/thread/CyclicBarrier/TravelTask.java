@@ -25,13 +25,13 @@ public class TravelTask implements Runnable{
     public void run() {
         try {
             Thread.sleep(arriveTime * 1000);
-            System.out.println(name +"到达集合点");
-            cyclicBarrier.await();
+            System.out.println(name +"到达集合点"+"线程名："+Thread.currentThread().getName());
+            cyclicBarrier.await(7,TimeUnit.SECONDS);
             System.out.println(name +"开始旅行啦～～");
         }
-//        catch (TimeoutException e) {
-//            log.error("TimeoutException : ",e);
-//        }
+        catch (TimeoutException e) {
+            log.error("TimeoutException : ",e);
+        }
         catch (InterruptedException e) {
             log.error("InterruptedException : ",e);
         } catch (BrokenBarrierException e) {

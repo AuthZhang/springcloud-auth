@@ -17,7 +17,7 @@ public class Test {
     public static void travel(){
         CyclicBarrier cyclicBarrier = new CyclicBarrier(3,new TourGuideTask());
         Executor executor = Executors.newFixedThreadPool(3);
-        executor.execute(new TravelTask(cyclicBarrier,"哈登",5));
+        executor.execute(new TravelTask(cyclicBarrier,"哈登",10));
         executor.execute(new TravelTask(cyclicBarrier,"保罗",3));
         executor.execute(new TravelTask(cyclicBarrier,"戈登",1));
         /**
