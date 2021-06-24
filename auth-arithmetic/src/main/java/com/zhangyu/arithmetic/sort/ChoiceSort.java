@@ -24,7 +24,6 @@ public class ChoiceSort {
                 if (params[j] < params[baseIndex]) {
                     baseIndex = j;
                 }
-                System.out.println(j);
             }
             temp = params[i];
             params[i] = params[baseIndex];

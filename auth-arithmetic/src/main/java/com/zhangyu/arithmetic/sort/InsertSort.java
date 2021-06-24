@@ -29,6 +29,7 @@ public class InsertSort {
                 j--;
             }
             params[j] = temp;
+            log.info("result : {}", Arrays.toString(params));
         }
     }
 
