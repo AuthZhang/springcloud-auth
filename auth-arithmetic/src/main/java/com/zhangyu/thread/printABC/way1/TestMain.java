@@ -1,4 +1,4 @@
-package com.auth.thread.printABC.way1;
+package com.zhangyu.thread.printABC.way1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

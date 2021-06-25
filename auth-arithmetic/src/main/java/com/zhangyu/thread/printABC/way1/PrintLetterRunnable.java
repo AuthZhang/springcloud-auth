@@ -1,4 +1,4 @@
-package com.auth.thread.printABC.way1;
+package com.zhangyu.thread.printABC.way1;
 /**
  * 
  * Created by zhangyu on 2018/9/6.

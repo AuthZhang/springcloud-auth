@@ -1,8 +1,4 @@
-package com.auth.thread.printArraysThreads;
-
-import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.LockSupport;
+package com.zhangyu.thread.printArraysThreads;
 
 /**
  * 两个线程交替打印数组

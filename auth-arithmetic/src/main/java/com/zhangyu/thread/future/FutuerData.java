@@ -1,4 +1,4 @@
-package com.auth.thread.future;
+package com.zhangyu.thread.future;
 
 public class FutuerData extends Thread {
 }

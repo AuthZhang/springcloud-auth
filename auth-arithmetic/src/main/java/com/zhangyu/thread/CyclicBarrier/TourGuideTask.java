@@ -1,4 +1,4 @@
-package com.auth.thread.CyclicBarrier;
+package com.zhangyu.thread.CyclicBarrier;
 
 import lombok.extern.slf4j.Slf4j;
 

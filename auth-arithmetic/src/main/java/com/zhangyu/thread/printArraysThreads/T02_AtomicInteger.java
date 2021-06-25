@@ -1,4 +1,4 @@
-package com.auth.thread.printArraysThreads;
+package com.zhangyu.thread.printArraysThreads;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

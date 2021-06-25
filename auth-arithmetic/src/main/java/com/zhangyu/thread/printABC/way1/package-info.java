@@ -6,4 +6,4 @@
  *
  * Created by zhangyu on 2018/9/6.
  */
-package com.auth.thread.printABC.way1;
+package com.zhangyu.thread.printABC.way1;
