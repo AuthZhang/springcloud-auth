@@ -36,7 +36,7 @@ public class Problems88 {
     /**
      * @description:
      * 解答成功:
-     * 				执行耗时:4 ms,击败了24.99% 的Java用户
+     * 				执行耗时:0 ms,击败了100% 的Java用户
      * 				内存消耗:38.5 MB,击败了53.99% 的Java用户
      * @author: zhangyu122
      * @date: 2021/6/25 2:44 下午
@@ -92,6 +92,10 @@ public class Problems88 {
                 iterator.remove();
             }
         }
+
+        /**
+         * 插入排序
+         */
         int temp = 0;
         for (int i = 1; i < (m+n); i++) {
             //temp始终作为被比较值，比他大的要放到当前位置
