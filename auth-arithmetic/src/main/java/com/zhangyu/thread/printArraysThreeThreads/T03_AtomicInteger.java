@@ -1,12 +1,12 @@
-package com.zhangyu.thread.printArraysThreads;
+package com.zhangyu.thread.printArraysThreeThreads;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 原子类自旋
- * 两个线程交替打印数组
+ * 三个线程交替打印数组
  */
-public class T02_AtomicInteger {
+public class T03_AtomicInteger {
 
 
     private static final AtomicInteger flag = new AtomicInteger(1);
@@ -18,32 +18,37 @@ public class T02_AtomicInteger {
      * 当自旋值是自己的值时，执行打印，同时将自旋值设置为另一个线程的自旋值，让另一个线程得以执行
      */
     private static void method3() {
-        int[] params = {2, 4, 6, 8, 0};
+        int[] params = {2, 4, 6, 8, 0, 1,3};
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < params.length; i++) {
                 while (flag.get() != 1) {
                 }
-                //奇数
-                if ((i & 1) == 0) {
-                    System.out.println(Thread.currentThread().getName() + ":" + params[i]);
-                    flag.set(2);
-                }
+                System.out.println(Thread.currentThread().getName() + ":" + params[i]);
+                i=i+2;
+                flag.set(2);
             }
-        }, "奇数位线程");
+        }, "第一位线程");
         Thread t2 = new Thread(() -> {
-            for (int i = 0; i < params.length; i++) {
+            for (int i = 1; i < params.length; i++) {
                 while (flag.get() != 2) {
                 }
-                //偶数
-                if ((i & 1) == 1) {
-                    System.out.println(Thread.currentThread().getName() + ":" + params[i]);
-                    flag.set(1);
-                }
+                System.out.println(Thread.currentThread().getName() + ":" + params[i]);
+                i=i+2;
+                flag.set(3);
             }
-
-        }, "偶数位线程");
+        }, "第二位线程");
+        Thread t3 = new Thread(() -> {
+            for (int i = 2; i < params.length; i++) {
+                while (flag.get() != 3) {
+                }
+                System.out.println(Thread.currentThread().getName() + ":" + params[i]);
+                i=i+2;
+                flag.set(1);
+            }
+        }, "第三位线程");
         t1.start();
         t2.start();
+        t3.start();
     }
 
     public static void main(String[] args) {

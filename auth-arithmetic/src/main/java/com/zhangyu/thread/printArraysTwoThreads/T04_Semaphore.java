@@ -1,4 +1,4 @@
-package com.zhangyu.thread.printArraysThreads;
+package com.zhangyu.thread.printArraysTwoThreads;
 
 import java.util.concurrent.Semaphore;
 

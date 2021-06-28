@@ -1,4 +1,4 @@
-package com.zhangyu.thread.printArraysThreads;
+package com.zhangyu.thread.printArraysTwoThreads;
 
 /**
  * 两个线程交替打印数组
