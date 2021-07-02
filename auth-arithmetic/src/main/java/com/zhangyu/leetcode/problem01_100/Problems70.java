@@ -15,7 +15,11 @@ public class Problems70 {
    
     public static void main(String[] args) {
 
-        System.out.println(climbStairs(45));
+        System.out.println(climbStairs2(4));
+        System.out.println(climbStairs2(5));
+        System.out.println(climbStairs2(6));
+        System.out.println(climbStairs2(7));
+        System.out.println(climbStairs2(8));
     }
 
     /**
@@ -33,11 +37,15 @@ public class Problems70 {
         if (n ==2 ){
             return 2;
         }
-        return climbStairs(n-1) + climbStairs(n-2);
+        return climbStairs(n-1) + climbStairs(n-2) ;
     }
     
     /**
      * @description:
+     * 一次最多可以迈2个台阶
+     * 解答成功:
+     * 				执行耗时:0 ms,击败了100.00% 的Java用户
+     * 				内存消耗:35.2 MB,击败了45.56% 的Java用户
      * @author: zhangyu122
      * @date: 2021/4/27 5:18 下午
      */
@@ -59,6 +67,30 @@ public class Problems70 {
         return temp;
     }
 
-
+    /**
+     * @description:
+     * 一次最多可以迈3个台阶
+     * @author: zhangyu122
+     * @date: 2021/7/2 6:02 下午
+     */
+    public static int climbStairs2(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+        int a = 1;
+        int b = 2;
+        int c = 4;
+        int temp = 0;
+        for (int i = 4; i <= n; i++) {
+            temp = a + b +c ;
+            a = b;
+            b = c;
+            c = temp;
+        }
+        return temp;
+    }
 
 }
