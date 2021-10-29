@@ -29,9 +29,7 @@ public class BubblingSort {
                     params[j + 1] = temp;
                 }
             }
-            log.info("result : {}", Arrays.toString(params));
         }
-
     }
 
     public static void main(String[] args) {
@@ -39,7 +37,6 @@ public class BubblingSort {
         bubblingSort(a);
         log.info("result : {}", Arrays.toString(a));
     }
-
 
 
 }

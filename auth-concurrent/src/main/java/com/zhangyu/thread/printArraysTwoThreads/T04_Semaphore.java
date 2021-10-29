@@ -3,18 +3,22 @@ package com.zhangyu.thread.printArraysTwoThreads;
 import java.util.concurrent.Semaphore;
 
 /**
- * 未调试通过
  * 两个线程交替打印数组
  */
 public class T04_Semaphore {
 
     private static final Semaphore semaphore = new Semaphore(1);
+    private static final Semaphore semaphore1 = new Semaphore(1);
 
     /**
      * 通过信号量实现
      */
     private static void method4() {
         int[] params = {2, 4, 6, 8, 0};
+        try {
+            semaphore1.acquire();
+        } catch (InterruptedException e) {
+        }
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < params.length; i++) {
                 try {
@@ -25,13 +29,13 @@ public class T04_Semaphore {
                 if ((i & 1) == 0) {
                     System.out.println(Thread.currentThread().getName() + ":" + params[i]);
                 }
-                semaphore.release();
+                semaphore1.release();
             }
         }, "奇数位线程");
         Thread t2 = new Thread(() -> {
             for (int i = 0; i < params.length; i++) {
                 try {
-                    semaphore.acquire();
+                    semaphore1.acquire();
                 } catch (InterruptedException e) {
                 }
                 //偶数

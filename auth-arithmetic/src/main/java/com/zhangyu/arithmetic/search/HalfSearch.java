@@ -32,7 +32,6 @@ public class HalfSearch {
              * min+max 结果可能会超过int的最大值Integer.MAX_VALUE，而出现负数，middle为负数是没有意义的
              *
              */
-
             int middle = min + ((max - min) >> 1);
 
             if (params[middle] == targert) {
@@ -48,13 +47,8 @@ public class HalfSearch {
 
     public static void main(String[] args) {
         int[] a = new int[]{0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
+        Integer b = new Integer(1);
         System.out.println(halSearch(a, 2));
 
-        System.out.println(4>>1);
-//        int a = Integer.MAX_VALUE;
-//        int b = Integer.MAX_VALUE;
-//        int c = (a + b) / 2;
-//        System.out.println(c);
     }
 }

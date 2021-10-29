@@ -20,11 +20,17 @@ public class ChoiceSort {
         int temp = 0;
         for (int i = 0; i < params.length - 1; i++) {
             baseIndex = i;
+            /**
+             * 找到后面最小的一个数
+             */
             for (int j = i; j < params.length; j++) {
                 if (params[j] < params[baseIndex]) {
                     baseIndex = j;
                 }
             }
+            /**
+             * 将最小的那个数跟当前数交换
+             */
             temp = params[i];
             params[i] = params[baseIndex];
             params[baseIndex] = temp;
