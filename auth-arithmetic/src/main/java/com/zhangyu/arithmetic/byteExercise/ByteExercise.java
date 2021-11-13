@@ -1,4 +1,4 @@
-package com.zhangyu.arithmetic.byteE;
+package com.zhangyu.arithmetic.byteExercise;
 
 public class ByteExercise {
 
